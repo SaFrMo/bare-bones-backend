@@ -15,7 +15,7 @@
   "scripts": {
     "start": "NODE_PATH=. babel-node server",
     "start-win": "cmd.exe /C \"set NODE_PATH=.&&babel-node server\"",
-    "seed": "knex migrate:latest && knex seed:run && echo 'Seeding complete!'"
+    "seed": "knex migrate:latest && knex seed:run"
   },
   "keywords": [],
   "author": "",

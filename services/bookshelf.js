@@ -4,7 +4,7 @@ import knex from 'knex'
 let knexInstance = knex({
     client: 'sqlite3',
     connection: {
-        filename: '../data/db.sqlite'
+        filename: 'data/db.sqlite3'
     }
 })
 
