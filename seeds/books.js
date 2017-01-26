@@ -8,7 +8,13 @@ exports.seed = function(knex, Promise) {
         knex('books').insert([
             {
                 title: 'The Invisible Man',
-                author: 'Ralph Ellison'
+                author_id: 0
+            }
+        ]),
+        knex('authors').insert([
+            {
+                id: 0,
+                name: 'Ralph Ellison'
             }
         ])
       ]);
