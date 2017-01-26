@@ -1,11 +1,6 @@
 import Bookshelf from 'bookshelf'
 import knex from 'knex'
+import settings from 'knexfile'
 
-let knexInstance = knex({
-    client: 'sqlite3',
-    connection: {
-        filename: 'data/db.sqlite3'
-    }
-})
-
-export default Bookshelf(knex)
+// Change this and the corresponding setting in knexfile.js to change the DB source
+export default Bookshelf( knex( settings.development ) )
