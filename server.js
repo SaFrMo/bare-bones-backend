@@ -14,8 +14,7 @@ app.use(bodyparser.urlencoded({ extended: true }))
 app.use(bodyparser.json())
 
 // Import routes
-//import bookRoute        from 'routes/add'
-import bookRoute from 'app/routes/books'
+// (your code here)
 
 // heartbeat
 router.get('/', (req, res) => {
@@ -29,8 +28,7 @@ router.get('/', (req, res) => {
 })
 
 // Map routes
-//router.use('/add', addRoute)
-router.use('/books', bookRoute)
+// (your code here)
 
 // Start service (prefixed with version)
 app.use('/v1', router)
