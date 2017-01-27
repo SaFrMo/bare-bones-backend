@@ -1,5 +1,5 @@
 import path from 'path'
-import bookshelf from 'services/bookshelf'
+import bookshelf from 'app/services/bookshelf'
 import _ from 'lodash'
 import express from 'express'
 import bodyparser from 'body-parser'
@@ -15,7 +15,7 @@ app.use(bodyparser.json())
 
 // Import routes
 //import bookRoute        from 'routes/add'
-import bookRoute from 'routes/books'
+import bookRoute from 'app/routes/books'
 
 // heartbeat
 router.get('/', (req, res) => {

@@ -1,4 +1,4 @@
-import bookshelf from 'services/bookshelf'
+import bookshelf from 'app/services/bookshelf'
 
 export default bookshelf.Model.extend({
 

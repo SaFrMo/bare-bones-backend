@@ -1,5 +1,5 @@
-import Book from 'models/book'
-import allowedParams from 'utils/allowed_params'
+import Book from 'app/models/book'
+import allowedParams from 'app/utils/allowed_params'
 
 export default (req, res, next) => {
 
