@@ -2,7 +2,14 @@
 bare-bones-backend is a simple way to get up and running writing a Node app in ES6 with Knex, Bookshelf, and SQLite 3.
 
 ### How
+
+#### Initial Setup
 1. `npm install`
-1. Seeding values (filling the database with sample data):
-    1. *Either* run `npm run seed` to populate with the sample data,
-    1. *or* run `knex migrate:make YOUR-MIGRATION-NAME` to set your own terms for the migration, then run `knex seed:make YOUR-SEED-NAME` to create a seed file. Click for details on [migrations](http://knexjs.org/#Schema) and [seeding](http://knexjs.org/#Seeds-CLI). After this, you can run `npm run seed` to use your own seed values.
+1. `npm run reset` (seeds with sample data)
+1. `npm start` (starts server on localhost:3000)
+
+#### Creating Database Schema
+1. Run `knex migrate:make YOUR-DATABASE-NAME`. The resulting migration file will appear in `data/migrations`.
+1. Follow the instructions at the [docs](http://knexjs.org/#Schema) or [here](http://www.dancorman.com/knex-your-sql-best-friend/) (under the 'Using Migrations' heading) to define your schema.
+    1. (Optional) Seed your data. See [here](http://knexjs.org/#Seeds-CLI) for more details.
+1. From there, you can define computed values and models/collections as they appear in code using [Bookshelf.js](http://bookshelfjs.org/index.html#).
