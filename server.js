@@ -2,12 +2,16 @@ import path from 'path'
 import bookshelf from 'services/bookshelf'
 import _ from 'lodash'
 import express from 'express'
+import bodyparser from 'body-parser'
 
 global.appRoot = path.resolve(__dirname)
 
 let app                 = express()
 let port                = process.env.PORT || 3000
 let router              = express.Router()
+
+app.use(bodyparser.urlencoded({ extended: true }))
+app.use(bodyparser.json())
 
 // Import routes
 //import bookRoute        from 'routes/add'
@@ -32,17 +36,3 @@ router.use('/books', bookRoute)
 app.use('/v1', router)
 app.listen(port)
 console.log(`Running on port ${port} at endpoint /v1/`)
-
-// import Book from 'models/book'
-//
-// var nextBook = new Book({
-//     title: 'Juneteenth',
-//     author_id: 1
-// })
-// nextBook.save()
-//
-// Book.forge().fetchAll({ withRelated: 'author' }).then(collection => {
-//     _.forEach( collection.serialize(), val => {
-//         console.log(`${val.title}, by ${val.author.name}\n`)
-//     })
-// })
