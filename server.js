@@ -10,8 +10,8 @@ let port                = process.env.PORT || 3000
 let router              = express.Router()
 
 // Import routes
-import addRoute         from 'routes/add'
-import listRoute        from 'routes/list'
+//import bookRoute        from 'routes/add'
+import bookRoute from 'routes/books'
 
 // heartbeat
 router.get('/', (req, res) => {
@@ -25,8 +25,8 @@ router.get('/', (req, res) => {
 })
 
 // Map routes
-//router.use('/add',      addRoute)
-//router.use('/list',     listRoute)
+//router.use('/add', addRoute)
+router.use('/books', bookRoute)
 
 // Start service (prefixed with version)
 app.use('/v1', router)
