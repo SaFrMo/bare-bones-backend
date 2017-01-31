@@ -21,7 +21,8 @@
     "start": "NODE_PATH=. babel-node server",
     "start-win": "cmd.exe /C \"set NODE_PATH=.&&babel-node server\"",
     "reset": "knex migrate:rollback && knex migrate:latest && knex seed:run",
-    "test": "NODE_PATH=. mocha --recursive --require babel-core/register ./app/**/*_test.js"
+    "test": "NODE_PATH=. mocha --recursive --require babel-core/register ./app/**/*_test.js",
+    "test-win": "cmd.exe /C \"set NODE_PATH=.&&mocha --recursive --require babel-core/register ./app/**/*_test.js\""
   },
   "keywords": [],
   "author": "",
